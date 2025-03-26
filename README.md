@@ -39,12 +39,6 @@ git clone https://github.com/tu-usuario/CSS-Can-Hover-Animation
 2. Pasa el cursor sobre la lata
 3. ¡Disfruta de la animación! 🎉
 
-## 📸 Vista Previa
-
-<div align="center">
-  
-![Preview](ruta-a-tu-gif.gif)
-
 <div align="center">
   
 🚀 Desarrollado con ❤️ por Gianmattus-Programmer  
