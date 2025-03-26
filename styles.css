@@ -1,0 +1,88 @@
+/* Creado por Gianmattus-Programmer */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #000, #555);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.can {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 170px;
+  z-index: 2;
+  transition: 0.7s;
+}
+
+.label {
+  --left: 0;
+  position: absolute;
+  width: 250px;
+  aspect-ratio: 2/4;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg) var(--left), url(images/mockup.png) 0 0;
+  background-size: auto 100%;
+  background-blend-mode: multiply;
+  mask-image: url(images/mockup.png);
+  mask-size: auto 100%;
+  transition: 0.8s;
+}
+
+.label-2 {
+  filter: hue-rotate(180deg);
+  opacity: 0;
+}
+
+.can:hover {
+  bottom: 300px;
+}
+
+.can:hover .label-2 {
+  opacity: 1;
+  --left: 500px;
+}
+
+.can:hover .label-1 {
+  opacity: 0;
+  --left: 500px;
+}
+
+.base {
+  position: absolute;
+  background: url(images/base.png);
+  bottom: 100px;
+  width: 400px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.7s;
+  transform-origin: center;
+}
+
+.can:hover ~ .base {
+  bottom: 50px;
+  width: 600px;
+  height: 250px;
+  opacity: 0.3;
+}
